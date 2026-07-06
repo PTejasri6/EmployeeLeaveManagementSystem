@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="EmployeeLeaveManagement.API/EmployeeLeaveManagement.API.csproj" />
+  <Project Path="EmployeeLeaveManagement.DAL/EmployeeLeaveManagement.DAL.csproj" />
 </Solution>
