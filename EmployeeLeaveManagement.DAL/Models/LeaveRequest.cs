@@ -19,9 +19,9 @@ public partial class LeaveRequest
 
     public DateTime AppliedDate { get; set; }
 
-    public string Status { get; set; } = null!;
+    public string? Status { get; set; } 
 
-    public virtual Employee Employee { get; set; } = null!;
+    public virtual Employee? Employee { get; set; }
 
-    public virtual LeaveType LeaveType { get; set; } = null!;
+    public virtual LeaveType? LeaveType { get; set; }
 }
