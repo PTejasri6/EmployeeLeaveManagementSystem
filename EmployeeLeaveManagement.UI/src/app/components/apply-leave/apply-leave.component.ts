@@ -54,7 +54,7 @@ export class ApplyLeaveComponent implements OnInit {
 
       response => {
 
-        if (response.success) {
+        if (response.result==1) {
 
           alert(response.message);
 

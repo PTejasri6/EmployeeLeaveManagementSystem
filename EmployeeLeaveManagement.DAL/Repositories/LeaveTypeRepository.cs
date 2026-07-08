@@ -25,7 +25,7 @@ namespace EmployeeLeaveManagement.DAL.Repositories
         {
             try
             {
-                return _context.LeaveTypes.ToList();
+                return _context.LeaveTypes.OrderBy(l => l.LeaveTypeId).ToList();
             }
             catch (Exception)
             {

@@ -22,7 +22,7 @@ namespace EmployeeLeaveManagement.DAL.Repositories
         {
             try
             {
-                return _context.Departments.ToList();
+                return _context.Departments.OrderBy(d => d.DepartmentId).ToList();
             }
             catch (Exception)
             {
