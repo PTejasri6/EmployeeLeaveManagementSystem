@@ -1,0 +1,43 @@
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.page-content {
+  flex: 1;
+  padding: 30px;
+}
+
+h2 {
+  color: #435a64;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+th {
+  background: #435a64;
+  color: white;
+  padding: 12px;
+  border: 1px solid #435a64;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #d9e1e4;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #f5f7f8;
+}
+
+tr:hover {
+  background: #e6ecef;
+}

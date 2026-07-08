@@ -1,4 +1,5 @@
-﻿using EmployeeLeaveManagement.DAL.Repositories;
+﻿using EmployeeLeaveManagement.DAL.Models;
+using EmployeeLeaveManagement.DAL.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeLeaveManagement.API.Controllers
@@ -36,18 +37,21 @@ namespace EmployeeLeaveManagement.API.Controllers
                 }
 
 
-                return Json(new
-                {
-                    success = true,
-                    message = "Login successful",
-                    data = new
-                    {
-                        user.UserId,
-                        user.EmployeeId,
-                        user.Email,
-                        Role = user.Role.RoleName
-                    }
-                });
+                
+                   return Json(new
+                   {
+                       success = true,
+                       message = "Login successful",
+                       data = new
+                       {
+                           user.UserId,
+                           user.EmployeeId,
+                           user.Email,
+                           Role = user.Role.RoleName,
+                           Name = user.Employee.FirstName + " " + user.Employee.LastName
+                       }
+                 
+            });
 
             }
             catch (Exception)

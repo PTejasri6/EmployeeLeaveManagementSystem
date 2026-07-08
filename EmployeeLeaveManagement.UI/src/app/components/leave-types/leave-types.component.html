@@ -1,0 +1,31 @@
+<div class="main-container">
+
+  <app-admin-layout></app-admin-layout>
+
+  <div class="page-content">
+
+    <h2>Leave Types</h2>
+
+    <table>
+
+      <tr>
+        <th>Leave Type Id</th>
+        <th>Leave Type Name</th>
+        <th>Maximum Leaves</th>
+      </tr>
+
+      <tr *ngFor="let leaveType of leaveTypes">
+
+        <td>{{leaveType.leaveTypeId}}</td>
+
+        <td>{{leaveType.leaveTypeName}}</td>
+
+        <td>{{leaveType.maximumLeaves}}</td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>

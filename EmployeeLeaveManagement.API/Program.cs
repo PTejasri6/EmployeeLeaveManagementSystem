@@ -41,7 +41,6 @@ namespace EmployeeLeaveManagement.API
                 });
             });
 
-            app.UseCors("AllowAngular");
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -56,6 +55,8 @@ namespace EmployeeLeaveManagement.API
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AllowAngular");
 
             app.UseAuthorization();
 

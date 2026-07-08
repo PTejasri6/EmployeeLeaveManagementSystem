@@ -1,0 +1,70 @@
+<div class="main-container">
+
+  <app-employee-layout></app-employee-layout>
+
+  <div class="page-content">
+
+    <h2>Apply Leave</h2>
+
+    <form #leaveForm="ngForm" (ngSubmit)="applyLeave(leaveForm)">
+
+      <div class="form-group">
+
+        <label>Leave Type</label>
+
+        <select name="leaveTypeId" ngModel required>
+
+          <option value="">Select Leave Type</option>
+
+          <option *ngFor="let leave of leaveTypes"
+                  [value]="leave.leaveTypeId">
+            {{leave.leaveTypeName}}
+          </option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>From Date</label>
+
+        <input type="date"
+               name="fromDate"
+               ngModel
+               required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>To Date</label>
+
+        <input type="date"
+               name="toDate"
+               ngModel
+               required>
+
+      </div>
+
+      <div class="form-group">
+
+        <label>Reason</label>
+
+        <textarea name="reason"
+                  ngModel
+                  rows="4"
+                  required>
+        </textarea>
+
+      </div>
+
+      <button type="submit">
+        Apply Leave
+      </button>
+
+    </form>
+
+  </div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="main-container">
+
+  <app-admin-layout></app-admin-layout>
+
+
+  <div class="page-content">
+
+    <h2>Employees</h2>
+
+
+    <table>
+
+      <tr>
+        <th>Employee Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone</th>
+        <th>Gender</th>
+        <th>Department</th>
+      </tr>
+
+
+      <tr *ngFor="let employee of employees">
+
+        <td>{{employee.employeeId}}</td>
+
+        <td>{{employee.firstName}}</td>
+
+        <td>{{employee.lastName}}</td>
+
+        <td>{{employee.phone}}</td>
+
+        <td>{{employee.gender}}</td>
+
+        <td>{{employee.departmentId}}</td>
+
+      </tr>
+
+
+    </table>
+
+
+  </div>
+
+
+</div>

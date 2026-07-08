@@ -282,6 +282,28 @@ namespace EmployeeLeaveManagement.API.Controllers
                 });
             }
         }
+        [HttpGet]
+        public JsonResult GetLeaveBalance(int employeeId)
+        {
+            try
+            {
+                var balance = _employeeRepository.GetLeaveBalance(employeeId);
 
+                return Json(new
+                {
+                    success = true,
+                    data = balance
+                });
+            }
+            catch
+            {
+                return Json(new
+                {
+                    success = false,
+                    message = "Unable to get leave balance",
+                    data = (object)null
+                });
+            }
+        }
     }
 }

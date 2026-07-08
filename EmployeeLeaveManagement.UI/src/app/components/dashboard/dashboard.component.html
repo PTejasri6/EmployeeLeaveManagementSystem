@@ -1,0 +1,77 @@
+<div class="main-container">
+
+  <!-- Admin Sidebar -->
+  <app-admin-layout *ngIf="role=='Admin'"></app-admin-layout>
+
+  <!-- Employee Sidebar -->
+  <app-employee-layout *ngIf="role=='Employee'"></app-employee-layout>
+
+  <div class="page-content">
+
+    <div class="dashboard-header">
+
+      <div>
+
+        <h2>Welcome, {{name}}</h2>
+
+        <p>{{role}} Dashboard</p>
+
+      </div>
+
+      <div class="user-info">
+
+        <strong>Employee ID :</strong> {{employeeId}}
+
+      </div>
+
+    </div>
+
+
+    <div class="dashboard-card">
+
+      <h3>Hello {{name}}!</h3>
+
+      <p>
+        Welcome to the Employee Leave Management System.
+      </p>
+
+      <p *ngIf="role=='Admin'">
+        You can manage Employees, Departments, Leave Types and Leave Requests using the menu on the left.
+      </p>
+
+      <p *ngIf="role=='Employee'">
+        You can apply for leave and view your leave history using the menu on the left.
+      </p>
+
+    </div>
+    <div class="dashboard-card" *ngIf="role=='Employee'">
+
+      <h3>Leave Balance</h3>
+
+      <table>
+
+        <tr>
+
+          <th>Leave Type</th>
+          <th>Total</th>
+          <th>Used</th>
+          <th>Remaining</th>
+
+        </tr>
+
+        <tr *ngFor="let leave of leaveBalance">
+
+          <td>{{leave.leaveType}}</td>
+          <td>{{leave.totalLeaves}}</td>
+          <td>{{leave.usedLeaves}}</td>
+          <td>{{leave.remainingLeaves}}</td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</div>

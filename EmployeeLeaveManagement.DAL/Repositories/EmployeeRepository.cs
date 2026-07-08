@@ -144,6 +144,29 @@ namespace EmployeeLeaveManagement.DAL.Repositories
 
             return result;
         }
+
+
+        public List<object> GetLeaveBalance(int employeeId)
+        {
+            var leaveBalance = _context.LeaveTypes
+                .Select(lt => new
+                {
+                    LeaveType = lt.LeaveTypeName,
+                    TotalLeaves = lt.MaximumLeaves,
+                    UsedLeaves = _context.LeaveRequests
+                        .Count(lr => lr.EmployeeId == employeeId
+                                  && lr.LeaveTypeId == lt.LeaveTypeId
+                                  && lr.Status == "Approved"),
+                    RemainingLeaves = lt.MaximumLeaves - _context.LeaveRequests
+                        .Count(lr => lr.EmployeeId == employeeId
+                                  && lr.LeaveTypeId == lt.LeaveTypeId
+                                  && lr.Status == "Approved")
+                })
+                .Cast<object>()
+                .ToList();
+
+            return leaveBalance;
+        }
     }
     }
 

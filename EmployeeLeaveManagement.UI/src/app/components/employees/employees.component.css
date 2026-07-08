@@ -1,0 +1,35 @@
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+
+.page-content {
+  flex: 1;
+  padding: 30px;
+}
+
+
+h2 {
+  color: #435a64;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+th {
+  background: #435a64;
+  color: white;
+  padding: 10px;
+}
+
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align:center;
+}

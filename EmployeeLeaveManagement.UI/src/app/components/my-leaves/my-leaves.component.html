@@ -1,0 +1,43 @@
+<div class="main-container">
+
+  <app-employee-layout></app-employee-layout>
+
+  <div class="page-content">
+
+    <h2>My Leaves</h2>
+
+    <table>
+
+      <tr>
+        <th>Leave Id</th>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Reason</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr *ngFor="let leave of leaves">
+
+        <td>{{leave.leaveRequestId}}</td>
+        <td>{{leave.leaveTypeId}}</td>
+        <td>{{leave.fromDate | date}}</td>
+        <td>{{leave.toDate | date}}</td>
+        <td>{{leave.reason}}</td>
+        <td>{{leave.status}}</td>
+
+        <td>
+          <button *ngIf="leave.status=='Pending'"
+                  (click)="cancelLeave(leave.leaveRequestId)">
+            Cancel
+          </button>
+        </td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>

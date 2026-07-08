@@ -1,0 +1,27 @@
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  background: #435a64;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+  .sidebar h3 {
+    color: white;
+    text-align: center;
+  }
+
+
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+
+
+    .sidebar a:hover {
+      background: #435a64;
+    }

@@ -22,8 +22,10 @@ namespace EmployeeLeaveManagement.DAL.Repositories
         {
             try
             {
-                return _context.Users.Include(u => u.Role)
-                               .FirstOrDefault(u =>u.Email == email && u.Password == password);
+                return _context.Users
+    .Include(u => u.Role)
+    .Include(u => u.Employee)
+    .FirstOrDefault(u => u.Email == email && u.Password == password);
             }
             catch (Exception)
             {

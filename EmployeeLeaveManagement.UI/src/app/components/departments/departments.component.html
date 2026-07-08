@@ -1,0 +1,28 @@
+<div class="main-container">
+
+  <app-admin-layout></app-admin-layout>
+
+  <div class="page-content">
+
+    <h2>Departments</h2>
+
+    <table>
+
+      <tr>
+        <th>Department Id</th>
+        <th>Department Name</th>
+      </tr>
+
+      <tr *ngFor="let department of departmentdata">
+
+        <td>{{department.departmentId}}</td>
+
+        <td>{{department.departmentName}}</td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>

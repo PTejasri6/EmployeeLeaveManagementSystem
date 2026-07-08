@@ -1,0 +1,59 @@
+<div class="main-container">
+
+  <app-admin-layout></app-admin-layout>
+
+  <div class="page-content">
+
+    <h2>Manage Leave Requests</h2>
+
+    <table>
+
+      <tr>
+        <th>Leave Id</th>
+        <th>Employee Id</th>
+        <th>Leave Type</th>
+        <th>From Date</th>
+        <th>To Date</th>
+        <th>Reason</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+
+      <tr *ngFor="let leave of leaveRequests">
+
+        <td>{{leave.leaveRequestId}}</td>
+
+        <td>{{leave.employeeId}}</td>
+
+        <td>{{leave.leaveTypeId}}</td>
+
+        <td>{{leave.fromDate | date}}</td>
+
+        <td>{{leave.toDate | date}}</td>
+
+        <td>{{leave.reason}}</td>
+
+        <td>{{leave.status}}</td>
+
+        <td>
+
+          <button *ngIf="leave.status=='Pending'"
+                  (click)="approveLeave(leave.leaveRequestId)">
+            Approve
+          </button>
+
+          <button *ngIf="leave.status=='Pending'"
+                  class="reject-btn"
+                  (click)="rejectLeave(leave.leaveRequestId)">
+            Reject
+          </button>
+
+        </td>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+</div>
