@@ -14,6 +14,7 @@ import { ManageLeavesComponent } from './components/manage-leaves/manage-leaves.
 import { HttpClientModule } from '@angular/common/http';
 import { AdminLayoutComponent } from './components/admin-layout/admin-layout.component';
 import { EmployeeLayoutComponent } from './components/employee-layout/employee-layout.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { EmployeeLayoutComponent } from './components/employee-layout/employee-l
     MyLeavesComponent,
     ManageLeavesComponent,
     AdminLayoutComponent,
-    EmployeeLayoutComponent
+    EmployeeLayoutComponent,
+    AddEmployeeComponent
   ],
   imports: [
     BrowserModule,

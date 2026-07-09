@@ -14,6 +14,8 @@ import { ManageLeavesComponent } from './components/manage-leaves/manage-leaves.
 import { MyLeavesComponent } from './components/my-leaves/my-leaves.component';
 import { DepartmentsComponent } from './components/departments/departments.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+
 const routes: Routes = [
   { path: "", component: LoginComponent },
   { path: 'admin', component: AdminLayoutComponent },
@@ -25,7 +27,8 @@ const routes: Routes = [
   { path: 'myleaves', component: MyLeavesComponent },
   { path: 'departments', component: DepartmentsComponent },
   { path: 'leavetypes',component:LeaveTypesComponent},
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'addemployee', component: AddEmployeeComponent }
 
 ];
 
